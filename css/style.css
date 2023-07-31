@@ -571,3 +571,26 @@ body {
     right: 0;
     width: 0;
 }
+
+
+/*------- footer -------*/
+
+#footer {
+    width: 100%;
+    height: 3rem;
+    font-style: italic;
+    background: #0a090a;
+    font-family: 'Play', sans-serif;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-footer {
+    color: var(--grisOscuro);
+    font-size: 14px;
+    font-weight: 600;
+}
