@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
-    --blanco: #f5fff7;
-    --gris: #edede9;
+    --blanco: #fcfffc;
+    --gris: #e2e2dd;
     --grisOscuro: #333533;
     --negro: #080708;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
 }
 
 * {
@@ -16,7 +21,7 @@
 body {
 
     background-color: var(--blanco);
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
@@ -50,22 +55,22 @@ body {
     justify-content: center;
     align-items: center;
     list-style: none;
+    gap: 2rem;
 }
 
 .nav-link {
     font-size: 1.5rem;
     font-weight: 400;
-
     color: var(--negro);
     text-decoration: none;
-    padding: 0 1.3rem;
+    transition: all 0.4s ease-out;
 }
 
 .nav-link:hover {
     color: var(--blanco);
     background-color: var(--negro);
-    padding: .8rem 1.3rem;
-    transition: all 0.3s;
+    padding: .5rem ;
+    transition: all 0.4s ease-in;
     border-radius: 5px;
 }
 
@@ -73,7 +78,7 @@ body {
 #inicio {
     height: 45rem;
     width: 100%;
-    background-image: url(../assets/fondo-inicio.png);
+    background-image: url(../assets/fondo-inicio.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,7 +88,7 @@ body {
 .container-inicio {
     height: 45rem;
     width: 100%;
-    background-color: rgba(8, 7, 8, 0.45);
+    background-color: rgba(8, 7, 8, 0.66);
     border-radius: 5px;
     box-shadow: 1px 1px 10px rgba(8, 7, 8, 0.75);
 }
@@ -174,13 +179,23 @@ body {
     margin-bottom: 4rem;
     display: grid;
     justify-content: center;
-    background-color: var(--gris);
+    background-color: var(--blanco);
+    transition: all 0.5s ease-out;
 }
-
+.products:hover {
+    transition: all 0.4s ease-in;
+    background: var(--negro);
+}
 .container-products {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     border: .1px solid var(--gris);
+    transition: all 0.5s ease-out;
+}
+
+.container-products:hover {
+    transform: scale(1.04);
+    transition: all 0.4s ease-in;
 }
 
 .product__imagen {
@@ -231,7 +246,7 @@ body {
 
 .hover-underline-animation {
     position: relative;
-    color: black;
+    color: var(--negro);
     padding-bottom: 20px;
 }
 
@@ -243,7 +258,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #000000;
+    background-color: var(--negro);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -265,7 +280,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /*  */
 }
 
 @media (max-width: 680px) {
@@ -300,7 +314,7 @@ body {
 
     .banner-title {
         font-size: 2rem;
-        color: red;
+        color: var(--gris);
         margin: auto;
     }
 }
@@ -349,8 +363,12 @@ body {
     font-size: 2rem;
     list-style: none;
     padding: 0 1.2rem;
+    transition: all 0.3s ease-out;
 }
-
+.item-redes:hover{
+    transition: all 0.3s ease-in;
+    transform: scale(1.15);
+}
 @media (max-width: 680px) {
     .item-descripcion {
         font-size: 1rem;
@@ -372,7 +390,9 @@ body {
 
 .tilte-producto {
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    letter-spacing: 6px;
 }
 
 .container-producto {
@@ -386,15 +406,14 @@ body {
 .producto__vista {
     height: 30rem;
     margin: auto;
-    background-color: var(--gris);
     cursor: pointer;
 }
 
 .img-producto {
     height: 40rem;
-    filter: drop-shadow(0px 1px 2px var(--grisOscuro));
+    filter: drop-shadow(0px 4px 5px var(--grisOscuro));
     border-radius: 5px;
-    box-shadow: 10px 10px 20px -8px rgba(0, 0, 0, 0.75);
+    transition: all 0.4s ease-out;
 }
 
 .img-container {
@@ -436,9 +455,11 @@ body {
 }
 
 .paragraph-producto {
-    font-size: 1.5rem;
-    font-weight: 100;
+    font-size: 1.2rem;
+    font-weight: 400;
     padding: 1rem.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
 }
 
 .btn-comprar {
@@ -449,10 +470,10 @@ body {
 
 .fancy {
     background-color: transparent;
-    border: 2px solid #000;
+    border: 2px solid var(--negro);
     border-radius: 0;
     box-sizing: border-box;
-    color: #fff;
+    color: var(--blanco);
     cursor: pointer;
     display: inline-block;
     font-weight: 700;
@@ -474,7 +495,7 @@ body {
     content: " ";
     width: 1.5625rem;
     height: 2px;
-    background: black;
+    background: var(--negro);
     top: 50%;
     left: 1.5em;
     position: absolute;
@@ -492,7 +513,7 @@ body {
     transition: all 0.3s ease-in-out;
     text-transform: uppercase;
     text-decoration: none;
-    color: black;
+    color: var(--negro);
 }
 
 .fancy .top-key {
@@ -526,17 +547,17 @@ body {
 }
 
 .fancy:hover {
-    color: white;
-    background: black;
+    color: var(--blanco);
+    background: var(--negro);
 }
 
 .fancy:hover::before {
     width: 0.9375rem;
-    background: white;
+    background: var(--blanco);
 }
 
 .fancy:hover .text {
-    color: white;
+    color: var(--blanco);
     padding-left: 1.5em;
 }
 
