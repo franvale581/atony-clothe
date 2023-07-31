@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+:root {
+    --blanco: #f5fff7;
+    --gris: #edede9;
+    --grisOscuro: #333533;
+    --negro: #080708;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+    background-color: var(--blanco);
+    font-family: 'Oxygen', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+    box-shadow: 0px 0px 10px rgba(8, 7, 8, 0.75);
+    position: fixed;
+    z-index: 999;
+}
+
+.logo {
+    height: 10rem;
+}
+
+.nav {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    color: var(--negro);
+    text-decoration: none;
+    padding: 0 1.3rem;
+}
+
+.nav-link:hover {
+    color: var(--blanco);
+    background-color: var(--negro);
+    padding: .8rem 1.3rem;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+/* ------- inicio section ------- */
+#inicio {
+    height: 45rem;
+    width: 100%;
+    background-image: url(../assets/fondo-inicio.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.container-inicio {
+    height: 45rem;
+    width: 100%;
+    background-color: rgba(8, 7, 8, 0.45);
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(8, 7, 8, 0.75);
+}
+
+.logo__container-inicio {
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+}
+
+.paragraph-inicio {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 100;
+    color: var(--blanco);
+    width: 65%;
+    margin: -5rem auto auto auto;
+}
+
+.span-inicio {
+    color: var(--gris);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+@media (max-width: 680px) {
+    #inicio {
+        height: 40rem;
+    }
+
+    .logo__container-inicio {
+        height: 25rem;
+    }
+
+    .paragraph-inicio {
+        font-size: .9rem;
+        text-align: center;
+        color: var(--blanco);
+        width: 50%;
+        margin: -5rem auto auto auto;
+    }
+
+}
+
+/* ------- banner ------- */
+.banner-container {
+    height: 15rem;
+    width: 100%;
+    margin: auto;
+    background-color: var(--negro);
+    display: flex;
+    place-content: center;
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    color: var(--gris);
+    margin: auto;
+}
+
+/* ------- shop section ------- */
+#shop {
+    height: 100rem;
+    width: 100%;
+}
+
+.container-shop {
+    height: 95rem;
+    width: 100%;
+    padding: 5rem 2rem;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.tilte-shop {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.products {
+    height: 20rem;
+    width: 100%;
+    margin-bottom: 4rem;
+    display: grid;
+    justify-content: center;
+    background-color: var(--gris);
+}
+
+.container-products {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    border: .1px solid var(--gris);
+}
+
+.product__imagen {
+    height: 20rem;
+    width: 100%;
+    filter: drop-shadow(0px 2px 4px var(--negro));
+}
+
+.nombre__products {
+    font-size: .8rem;
+    text-align: center;
+    font-weight: lighter;
+    padding: 1rem 0;
+    color: var(--grisOscuro);
+    text-transform: uppercase;
+}
+
+.btn-cta {
+    text-align: center;
+}
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media (max-width: 1060px) {
+    #shop {
+        height: 180rem;
+        width: 100%;
+    }
+
+    .container-shop {
+        height: 180rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*  */
+}
+
+@media (max-width: 680px) {
+    #shop {
+        height: 155rem;
+        width: 100%;
+    }
+
+    .container-shop {
+        height: 155rem;
+    }
+
+    .products,
+    .product__imagen {
+        height: 15rem;
+    }
+
+    .container-products {
+        height: 22.5rem;
+        box-shadow: 0px 0px 10px rgba(8, 7, 8, 0.25);
+        cursor: pointer;
+    }
+
+    .nombre__products {
+        font-size: .5rem;
+    }
+
+    .btn-products {
+        width: 5rem;
+        font-size: .9rem;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+        color: red;
+        margin: auto;
+    }
+}
+
+/* ------ section contacto ------- */
+#contacto {
+    height: 26rem;
+    width: 100%;
+    background-color: var(--negro);
+}
+
+.container-contacto {
+    height: 25.5rem;
+    width: 100%;
+}
+
+.logo-contacto {
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+.title-contacto {
+    text-align: center;
+    color: var(--blanco);
+    margin-bottom: 3rem;
+}
+
+.item-contacto {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: -2rem;
+    color: var(--blanco);
+}
+
+.item-descripcion {
+    font-size: 1.2rem;
+    list-style: none;
+    padding: 0 1.2rem;
+}
+
+.item-redes {
+    text-align: center;
+    font-size: 2rem;
+    list-style: none;
+    padding: 0 1.2rem;
+}
+
+@media (max-width: 680px) {
+    .item-descripcion {
+        font-size: 1rem;
+        list-style: none;
+        padding: 0 .6rem;
+    }
+
+    .logo__container-inicio {
+        height: 25rem;
+    }
+}
+
+/* -------- producto section ------- */
+#producto {
+    height: 50rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.tilte-producto {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.container-producto {
+    height: 30rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.producto__vista {
+    height: 30rem;
+    margin: auto;
+    background-color: var(--gris);
+    cursor: pointer;
+}
+
+.img-producto {
+    height: 40rem;
+    filter: drop-shadow(0px 1px 2px var(--grisOscuro));
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px -8px rgba(0, 0, 0, 0.75);
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.img-producto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+}
+
+.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* Ajusta el tamaño de la segunda imagen para cubrir el contenedor */
+    opacity: 0;
+    /* Inicialmente la segunda imagen está oculta */
+    transition: opacity 0.9s ease;
+    /* Agrega una transición suave para el cambio de imagen */
+}
+
+.img-container:hover .hover-img {
+    opacity: 1;
+    /* Al pasar el cursor sobre el contenedor, la segunda imagen se muestra */
+}
+
+.producto__info {
+    top: 0;
+    width: 100%;
+}
+
+.paragraph-producto {
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding: 1rem.5rem;
+}
+
+.btn-comprar {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.fancy {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+}
+
+.fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    background: black;
+}
+
+.fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+}
+
+.fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
