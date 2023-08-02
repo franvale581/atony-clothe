@@ -226,6 +226,7 @@ body {
 }
 
 .btn-cta {
+    padding: 0 5px;
     text-align: center;
 }
 
@@ -381,6 +382,10 @@ body {
 .item-redes:hover{
     transition: all 0.3s ease-in;
     transform: scale(1.15);
+}
+
+@media (max-width: 460px) {
+
 }
 
 @media (max-width: 680px) {
@@ -712,5 +717,13 @@ body {
         font-size: 1rem;
         list-style: none;
         padding: 0.5rem;
+    }
+    
+}
+
+@media (max-width: 460px) {
+
+    .cta {
+        padding: 0 5px;
     }
 }
