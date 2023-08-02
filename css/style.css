@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bebas+Neue&family=Play:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 :root {
     --blanco: #fcfffc;
     --gris: #e2e2dd;
@@ -37,6 +39,7 @@ body {
     box-shadow: 0px 0px 10px rgba(8, 7, 8, 0.75);
     position: fixed;
     z-index: 999;
+    font-family: 'Play', sans-serif;
 }
 
 .logo {
@@ -78,7 +81,7 @@ body {
 
 /* ------- inicio section ------- */
 #inicio {
-    height: 45rem;
+    height: 50rem;
     width: 100%;
     background-image: url(../assets/fondo-inicio.jpeg);
     background-position: center;
@@ -88,9 +91,9 @@ body {
     overflow: hidden;
 }
 .container-inicio {
-    height: 45rem;
+    height: 50rem;
     width: 100%;
-    background-color: rgba(8, 7, 8, 0.66);
+    background-color: rgba(8, 7, 8, 0.842);
     border-radius: 5px;
     box-shadow: 1px 1px 10px rgba(8, 7, 8, 0.75);
 }
@@ -104,10 +107,11 @@ body {
 .paragraph-inicio {
     font-size: 1.2rem;
     text-align: center;
-    font-weight: 100;
+    font-weight: 300;
     color: var(--blanco);
     width: 65%;
     margin: -5rem auto auto auto;
+    font-family: 'Lato', sans-serif;
 }
 
 .span-inicio {
@@ -118,6 +122,11 @@ body {
 }
 
 @media (max-width: 680px) {
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+
     #inicio {
         height: 40rem;
     }
@@ -138,7 +147,7 @@ body {
 
 /* ------- banner ------- */
 .banner-container {
-    height: 15rem;
+    height: 13rem;
     width: 100%;
     margin: auto;
     background-color: var(--negro);
@@ -598,4 +607,110 @@ body {
     color: var(--grisOscuro);
     font-size: 14px;
     font-weight: 600;
+}
+
+
+/*------- mediaqueris -------*/
+
+@media (max-width: 620px) {
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+
+    #inicio {
+        height: 47rem;
+    }
+
+    .logo__container-inicio {
+        margin-top: 2rem;
+        height: 25rem;
+    }
+
+    .paragraph-inicio {
+        font-size: .7rem;
+        text-align: center;
+        width: 100%;
+        padding: 2rem;
+        margin: 0;
+    }   
+
+    .span-inicio {
+        font-size: 0.7rem;
+    }
+
+    /*banner*/
+
+    .banner-container {
+        height: 8rem;
+        width: 100%;
+        margin: auto;
+        background-color: var(--negro);
+        display: flex;
+        place-content: center;
+    }
+    
+    .banner-title {
+        font-size: 1.7rem;
+        color: var(--gris);
+        margin: auto;
+    }
+    
+
+    /*products*/
+
+    #shop {
+        height: 130rem;
+        width: 100%;
+    }
+
+    .container-shop {
+        height: 130rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .products {
+        height: 10rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        display: grid;
+        justify-content: center;
+        background-color: var(--blanco);
+        transition: all 0.5s ease-out;
+    }
+
+    .product__imagen {
+        height: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    .container-products {
+      height: 19rem;
+    }
+
+    .cta span {
+        padding-bottom: 2px;
+        letter-spacing: 4px;
+        padding-right: 15px;
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    /*contacts*/
+
+    #contacto {
+        height: 26rem;
+        width: 100%;
+        background-color: var(--negro);
+    }
+
+    .item-descripcion {
+        font-size: 1rem;
+        list-style: none;
+        padding: 0.5rem;
+    }
 }
