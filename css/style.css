@@ -481,6 +481,16 @@ body {
     letter-spacing: 1px;
 }
 
+.talles-title a{
+    color: var(--negro);
+    transition: all 0.2s ease-out;
+}
+
+.talles-title a:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in;
+}
+
 .btn-comprar {
     display: flex;
     justify-content: center;
