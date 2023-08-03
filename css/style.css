@@ -145,7 +145,7 @@ body {
 
 }
 
-/* ------- banner ------- */
+/* ------- banner section ------- */
 .banner-container {
     height: 13rem;
     width: 100%;
@@ -332,7 +332,7 @@ body {
     }
 }
 
-/* ------ section contacto ------- */
+/* ------ contact section ------- */
 #contacto {
     height: 26rem;
     width: 100%;
@@ -400,7 +400,7 @@ body {
     }
 }
 
-/* -------- producto section ------- */
+/* -------- products section ------- */
 #producto {
     height: 50rem;
     width: 100%;
@@ -663,7 +663,7 @@ body {
     }
     
 
-    /*products*/
+    /*shop*/
 
     #shop {
         height: 130rem;
@@ -725,5 +725,61 @@ body {
 
     .cta {
         padding: 0 5px;
+    }
+}
+
+
+/*------- mediaqueris products-------*/
+
+@media (max-width: 998px) {
+
+    .img-producto {
+        height: 24rem;
+    }
+
+    .paragraph-producto {
+        font-size: .9rem;
+        text-align: center;
+    }
+
+    .talles-title {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+
+@media (max-width: 744px) {
+    .container-producto {
+        height: 30rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tilte-producto {
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        letter-spacing: 6px;
+        font-size: 1.2rem;
+    }
+
+    .img-producto {
+        height: 16rem;
+        margin-bottom: 3rem;
+    }
+
+    .paragraph-producto {
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .talles-title {
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        margin-bottom: 2.5rem;
     }
 }
