@@ -820,10 +820,11 @@ body {
 @media (max-width: 684px) {
 
     #table {
-        height: 30rem;
+        height: 40rem;
     }
 
     .table img {
+        width: 100%;
         height: 15rem;
         margin-right: 0;
     }
